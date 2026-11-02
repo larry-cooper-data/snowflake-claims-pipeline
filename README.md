@@ -2,7 +2,7 @@
 
 A layered Snowflake pipeline for medical claims data: raw files are loaded, cleaned and checked for quality problems, then shaped into report-ready tables. It runs on a synthetic dataset of about 8,600 members, 69,000 claims and 109,000 claim lines from a third-party administrator of self-funded health plans.
 
-**Status:** in progress. dbt models and tests are next on the roadmap.
+**Status:** in progress. Core pipeline complete; dbt models and tests are next.
 
 ## Architecture
 
