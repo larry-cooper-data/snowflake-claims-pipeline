@@ -34,6 +34,7 @@ CSV files ──► stage (@landing) ──► RAW ──► STAGING ──► M
   - A Type 2 slowly changing member dimension using hash-based change detection and point-in-time joins
 - **Recovery:** Time Travel and zero-copy cloning to restore a table from before a bad `UPDATE`, swapped back into place with `ALTER TABLE ... SWAP WITH`
 - **Performance:** query profile analysis of partition pruning, cache behavior and warehouse sizing on a 69-million-row test table
+   - **Data quality checks:** `sql/10_data_quality_checks.sql` runs six checks after every load and lists the expected result for each.
 
 ## Data quality issues caught
 
