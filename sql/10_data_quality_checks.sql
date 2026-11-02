@@ -1,6 +1,7 @@
 -- 10_data_quality_checks.sql
 -- Run after every load. The expected result is in each comment.
 -- In a clean production pipeline most of these would be 0; this dataset has known issues planted.
+-- Fix Gender mapping
 use role sysadmin;
 use warehouse practice_wh;
 
