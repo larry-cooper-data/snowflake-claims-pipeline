@@ -1,0 +1,26 @@
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Secrets and local settings: never commit passwords or keys
+.env
+*.key
+*.p8
+profiles.yml
+
+# dbt (for the dbt lesson)
+target/
+dbt_packages/
+logs/
+
+# Generator answer key output
+planted.json

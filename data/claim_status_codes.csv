@@ -1,0 +1,6 @@
+claim_status,description
+P,Paid (finalized)
+D,"Denied (finalized, nothing paid)"
+H,Pended - received but not finalized yet
+X,Reversed - replaced by an adjustment claim
+A,Adjustment - replacement for a reversed claim (see original_claim_id)

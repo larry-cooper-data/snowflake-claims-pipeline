@@ -1,0 +1,5 @@
+plan_code,plan_name,plan_type,deductible_amt,oop_max_amt,coinsurance_pct,oon_covered_flag,oon_coinsurance_pct,pcp_copay_amt,specialist_copay_amt,er_copay_amt
+PPO500,PPO 500,PPO,500.00,3000.00,0.20,Y,0.40,25.00,50.00,250.00
+PPO1500,PPO 1500,PPO,1500.00,5000.00,0.20,Y,0.50,30.00,60.00,300.00
+HDHP3300,HDHP 3300 with HSA,HDHP,3300.00,6500.00,0.10,Y,0.40,0.00,0.00,0.00
+EPO1000,EPO 1000,EPO,1000.00,4000.00,0.20,N,,20.00,40.00,200.00

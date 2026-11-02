@@ -1,0 +1,20 @@
+revenue_code,description
+0120,"Room and board, semi-private"
+0170,Nursery
+0200,Intensive care
+0250,Pharmacy
+0260,IV therapy
+0270,Medical/surgical supplies
+0300,Laboratory
+0320,Diagnostic X-ray
+0350,CT scan
+0360,Operating room services
+0410,Respiratory therapy
+0450,Emergency room
+0480,Cardiology
+0490,Ambulatory surgical care
+0610,MRI
+0636,Drugs requiring detailed coding
+0710,Recovery room
+0720,Labor and delivery room
+0730,EKG/ECG

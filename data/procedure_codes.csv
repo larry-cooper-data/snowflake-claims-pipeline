@@ -1,0 +1,66 @@
+procedure_code,description,category
+99202,"New patient office visit, straightforward",Office Visit
+99203,"New patient office visit, low complexity",Office Visit
+99204,"New patient office visit, moderate complexity",Office Visit
+99205,"New patient office visit, high complexity",Office Visit
+99211,"Established patient visit, minimal (nurse visit)",Office Visit
+99212,"Established patient office visit, straightforward",Office Visit
+99213,"Established patient office visit, low complexity",Office Visit
+99214,"Established patient office visit, moderate complexity",Office Visit
+99215,"Established patient office visit, high complexity",Office Visit
+99391,"Preventive visit, established patient, under age 1",Preventive
+99392,"Preventive visit, established patient, age 1-4",Preventive
+99393,"Preventive visit, established patient, age 5-11",Preventive
+99394,"Preventive visit, established patient, age 12-17",Preventive
+99395,"Preventive visit, established patient, age 18-39",Preventive
+99396,"Preventive visit, established patient, age 40-64",Preventive
+99397,"Preventive visit, established patient, age 65+",Preventive
+99283,"Emergency department visit, moderate severity",Emergency
+99284,"Emergency department visit, moderately high severity",Emergency
+99285,"Emergency department visit, high severity",Emergency
+99223,"Initial hospital inpatient care, high complexity",Inpatient Visit
+99232,"Subsequent hospital inpatient care, moderate complexity",Inpatient Visit
+99238,Hospital discharge day management,Inpatient Visit
+99460,Initial newborn care in hospital,Inpatient Visit
+36415,Routine blood draw (venipuncture),Lab
+80053,Comprehensive metabolic panel,Lab
+80061,Lipid panel,Lab
+83036,Hemoglobin A1c,Lab
+84443,Thyroid stimulating hormone (TSH),Lab
+85025,Complete blood count with differential,Lab
+81002,"Urinalysis, dipstick, no microscopy",Lab
+87804,Rapid influenza test,Lab
+87880,Rapid strep test,Lab
+87635,COVID-19 PCR test,Lab
+71046,"Chest X-ray, 2 views",Radiology
+73562,"Knee X-ray, 3 views",Radiology
+73610,"Ankle X-ray, 3 views",Radiology
+72148,MRI lumbar spine without contrast,Radiology
+73721,MRI knee without contrast,Radiology
+70450,CT head without contrast,Radiology
+74177,CT abdomen and pelvis with contrast,Radiology
+77067,"Screening mammogram, both breasts",Preventive
+76805,Obstetric ultrasound after first trimester,Maternity
+59025,Fetal non-stress test,Maternity
+59400,Routine obstetric care with vaginal delivery (global),Maternity
+93000,Electrocardiogram (ECG) with interpretation,Cardiology
+93306,"Echocardiogram, complete with Doppler",Cardiology
+20610,"Joint injection or aspiration, major joint",Surgery
+29881,Knee arthroscopy with meniscus repair/removal,Surgery
+27447,Total knee replacement,Surgery
+47562,Laparoscopic gallbladder removal,Surgery
+45378,"Colonoscopy, diagnostic or screening",Surgery
+45380,Colonoscopy with biopsy,Surgery
+97161,"Physical therapy evaluation, low complexity",Physical Therapy
+97110,"Therapeutic exercise, each 15 minutes",Physical Therapy
+97140,"Manual therapy, each 15 minutes",Physical Therapy
+90791,Psychiatric diagnostic evaluation,Behavioral Health
+90834,"Psychotherapy, 45 minutes",Behavioral Health
+90837,"Psychotherapy, 60 minutes",Behavioral Health
+90471,"Vaccine administration, first vaccine",Immunization
+90686,"Flu vaccine, preservative-free",Immunization
+96413,"Chemotherapy IV infusion, first hour",Oncology
+96415,"Chemotherapy IV infusion, each additional hour",Oncology
+J9271,"Pembrolizumab injection, per 1 mg",Drug
+J0696,"Ceftriaxone injection, per 250 mg",Drug
+J1100,"Dexamethasone injection, per 1 mg",Drug

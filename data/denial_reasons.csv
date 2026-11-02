@@ -1,0 +1,9 @@
+denial_reason_code,description
+D01,Member not eligible on date of service
+D02,Duplicate of a claim already processed
+D03,Timely filing limit exceeded (received more than 365 days after service)
+D04,Prior authorization required and not on file
+D05,Service not covered by the plan
+D06,Missing or invalid claim information
+D07,Bundled into another service on the same claim
+D08,Out-of-network services not covered by this plan

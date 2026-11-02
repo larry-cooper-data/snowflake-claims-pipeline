@@ -1,0 +1,54 @@
+dx_code,description,category
+Z00.00,"Adult general exam, no abnormal findings",Preventive
+Z00.01,"Adult general exam, with abnormal findings",Preventive
+Z00.129,"Routine child health exam, no abnormal findings",Preventive
+Z23,Encounter for immunization,Preventive
+Z12.31,Screening mammogram for breast cancer,Preventive
+Z12.11,Screening for colon cancer,Preventive
+Z34.90,Supervision of normal pregnancy,Maternity
+O80,Full-term uncomplicated delivery,Maternity
+Z38.00,"Single liveborn infant, born in hospital, vaginal delivery",Newborn
+E11.9,Type 2 diabetes without complications,Chronic
+E11.65,Type 2 diabetes with high blood sugar,Chronic
+R73.03,Prediabetes,Chronic
+I10,High blood pressure (essential hypertension),Chronic
+E78.5,"High cholesterol (hyperlipidemia), unspecified",Chronic
+E03.9,"Hypothyroidism, unspecified",Chronic
+E66.9,"Obesity, unspecified",Chronic
+J45.909,"Asthma, uncomplicated",Chronic
+J44.9,"COPD, unspecified",Chronic
+K21.9,Acid reflux (GERD) without esophagitis,Chronic
+I25.10,Coronary artery disease without angina,Cardiac
+I48.91,"Atrial fibrillation, unspecified",Cardiac
+I50.9,"Heart failure, unspecified",Cardiac
+R07.9,"Chest pain, unspecified",Symptom
+R05.9,"Cough, unspecified",Symptom
+R10.9,"Abdominal pain, unspecified",Symptom
+R51.9,"Headache, unspecified",Symptom
+F41.1,Generalized anxiety disorder,Behavioral Health
+F32.A,"Depression, unspecified",Behavioral Health
+F90.2,"ADHD, combined type",Behavioral Health
+J06.9,Acute upper respiratory infection,Acute
+J02.9,Sore throat (acute pharyngitis),Acute
+J02.0,Strep throat,Acute
+J11.1,Influenza with respiratory symptoms,Acute
+U07.1,COVID-19,Acute
+H66.90,"Ear infection (otitis media), unspecified ear",Acute
+H10.9,"Pink eye (conjunctivitis), unspecified",Acute
+N39.0,Urinary tract infection,Acute
+L03.90,"Cellulitis, unspecified",Acute
+J18.9,"Pneumonia, unspecified organism",Acute
+S93.401A,"Right ankle sprain, initial encounter",Injury
+G43.909,"Migraine, unspecified",Neurological
+K80.20,Gallstones without inflammation or blockage,Digestive
+K57.30,Diverticulosis of large intestine,Digestive
+M54.50,"Low back pain, unspecified",Musculoskeletal
+M25.561,Pain in right knee,Musculoskeletal
+M25.562,Pain in left knee,Musculoskeletal
+M17.11,"Osteoarthritis, right knee",Musculoskeletal
+M17.12,"Osteoarthritis, left knee",Musculoskeletal
+M23.221,"Old meniscus tear, right knee",Musculoskeletal
+M23.222,"Old meniscus tear, left knee",Musculoskeletal
+C50.911,"Breast cancer, right breast",Oncology
+C34.90,"Lung cancer, unspecified side",Oncology
+Z51.11,Encounter for chemotherapy,Oncology
