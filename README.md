@@ -34,7 +34,14 @@ CSV files ──► stage (@landing) ──► RAW ──► STAGING ──► M
   - A Type 2 slowly changing member dimension using hash-based change detection and point-in-time joins
 - **Recovery:** Time Travel and zero-copy cloning to restore a table from before a bad `UPDATE`, swapped back into place with `ALTER TABLE ... SWAP WITH`
 - **Performance:** query profile analysis of partition pruning, cache behavior and warehouse sizing on a 69-million-row test table
-   - **Data quality checks:** `sql/10_data_quality_checks.sql` runs six checks after every load and lists the expected result for each.
+- **Data quality checks:** `sql/10_data_quality_checks.sql` runs six checks after every load and lists the expected result for each.
+- **Orchestration:** a three-step task graph (`sql/11_task_graph.sql`) runs the pipeline nightly:
+
+  ```
+  t_load_raw  ──►  t_dq_checks  ──►  t_publish_paid_claims
+  ```
+
+  The load reloads every RAW table. A stored procedure then runs the six data quality checks, logs each result to `ops.dq_results`, and raises an error if any is off. That error fails the run, so the published report table is only rebuilt from data that passed every check.
 
 ## Data quality issues caught
 
@@ -66,10 +73,11 @@ sql/         Snowflake SQL, run in numbered order
 3. Upload the files in `data/` to the `@landing` stage.
 4. Run `sql/03_load_raw_proc.sql`, then `call claims_db.raw.load_raw(true);`
 5. Run `sql/04_staging.sql`, then `sql/05_marts.sql`.
+6. Run `sql/11_task_graph.sql` to build the scheduled pipeline and test it once.
 
 ## Tech
 
-Snowflake (SQL, Snowflake Scripting, streams, tasks, Time Travel, cloning), Python, Git
+Snowflake (SQL, Snowflake Scripting, stored procedures, streams, tasks and task graphs, Time Travel, cloning), Python, Git
 
 ## About the data
 

@@ -14,5 +14,7 @@ Copy your files from the Snowflake workspace into this folder, keeping these nam
 | 07_streams_tasks.sql | Stream and scheduled task practice |
 | 08_merge.sql | MERGE and the Type 2 member dimension |
 | 09_performance.sql | Cache, pruning and warehouse sizing tests |
+| 10_data_quality_checks.sql | Six post-load checks with expected results |
+| 11_task_graph.sql | Nightly task graph: load, data quality gate, publish |
 
 Delete this README once your files are in, or leave it as the index.
