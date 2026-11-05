@@ -1,11 +1,8 @@
 use role sysadmin;
 use warehouse practice_wh;
+use database claims_db;
 create schema if not exists claims_db.staging;
 
-drop schema claims_db.staging;
-
-
-use role accountadmin;
 show schemas in database claims_db;
 
 create or replace view claims_db.staging.stg_claims as
@@ -66,8 +63,6 @@ select member_id, address_state, address_zip
 from claims_db.staging.stg_members
 where address_state in ('MA', 'NJ', 'CT')
 limit 10;
-
-select * from claims_db.staging.stg_eligibility;
 
 
 create or replace view claims_db.staging.stg_eligibility as
