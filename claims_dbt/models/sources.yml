@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: raw
+    database: claims_db
+    schema: raw
+    tables:
+      - name: claims
+      - name: claim_lines
+      - name: members
+      - name: eligibility

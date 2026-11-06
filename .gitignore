@@ -15,7 +15,6 @@ venv/
 .env
 *.key
 *.p8
-profiles.yml
 
 # dbt (for the dbt lesson)
 target/

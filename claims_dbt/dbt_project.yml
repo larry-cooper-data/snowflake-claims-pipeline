@@ -1,0 +1,22 @@
+name: claims_dbt
+version: 1.0.0
+config-version: 2
+profile: claims_dbt
+model-paths:
+  - models
+analysis-paths:
+  - analyses
+test-paths:
+  - tests
+seed-paths:
+  - seeds
+macro-paths:
+  - macros
+snapshot-paths:
+  - snapshots
+models:
+  claims_dbt:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: view
