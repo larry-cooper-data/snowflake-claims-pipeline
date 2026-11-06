@@ -1,0 +1,10 @@
+claims_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      role: SYSADMIN
+      warehouse: PRACTICE_WH
+      database: CLAIMS_DB
+      schema: DBT
+      threads: 8

@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: stg_claims
+    columns:
+      - name: claim_id
+        data_tests:
+          - unique
+          - not_null
+      - name: claim_status
+        data_tests:
+          - accepted_values:
+              values: ['P', 'D', 'H', 'X', 'A']
+      - name: member_id
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('stg_members')
+              field: member_id
+              config:
+                severity: warn
+
+  - name: stg_members
+    columns:
+      - name: member_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: paid_claims
+    columns:
+      - name: claim_id
+        data_tests:
+          - unique
+          - not_null
+      - name: group_id
+        data_tests:
+          - not_null:
+              config:
+                severity: warn
