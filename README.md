@@ -2,7 +2,7 @@
 
 A layered Snowflake pipeline for medical claims data: raw files are loaded, cleaned and checked for quality problems, then shaped into report-ready tables. It runs on a synthetic dataset of about 8,600 members, 69,000 claims and 109,000 claim lines from a third-party administrator of self-funded health plans.
 
-**Status:** in progress. Core pipeline complete; dbt models and tests are next.
+**Status:** in progress. Core pipeline and dbt project complete; security, data sharing and JSON are next.
 
 ## Architecture
 
@@ -43,6 +43,20 @@ CSV files ──► stage (@landing) ──► RAW ──► STAGING ──► M
 
   The load reloads every RAW table. A stored procedure then runs the six data quality checks, logs each result to `ops.dq_results`, and raises an error if any is off. That error fails the run, so the published report table is only rebuilt from data that passed every check.
 
+## dbt project (`claims_dbt/`)
+
+The STAGING and MARTS layers are also built as a dbt project that runs inside Snowflake. It produces the same results as the hand-written views: 64,231 paid claims totaling $23,299,313.41.
+
+| Piece | What it does |
+|---|---|
+| `models/sources.yml` | Declares the RAW tables as dbt sources |
+| `models/staging/` | `stg_claims`, `stg_claim_lines`, `stg_members` and `stg_eligibility`, built with `source()` |
+| `models/marts/paid_claims.sql` | Joins claims to eligibility with `ref()`, so dbt builds it after its inputs |
+| `models/schema.yml` | 10 tests: unique and not-null keys, accepted claim statuses, every claim's member exists, every paid claim has an employer group. The two known source issues are set to warn. |
+| `snapshots/members_snapshot.sql` | SCD Type 2 history of member records |
+
+`dbt build` runs every model and test in dependency order: PASS=14, WARN=2.
+
 ## Data quality issues caught
 
 Every load is checked against expected row counts. The checks surfaced:
@@ -64,6 +78,7 @@ data/        14 source CSV files
 generator/   Python script that rebuilds the synthetic data (fixed seed, same output every time)
 docs/        data dictionary: every table and column, and how claims were priced and paid
 sql/         Snowflake SQL, run in numbered order
+claims_dbt/  dbt project: staging and mart models, tests, snapshot
 ```
 
 ## Rebuilding from scratch
@@ -77,7 +92,7 @@ sql/         Snowflake SQL, run in numbered order
 
 ## Tech
 
-Snowflake (SQL, Snowflake Scripting, stored procedures, streams, tasks and task graphs, Time Travel, cloning), Python, Git
+Snowflake (SQL, Snowflake Scripting, stored procedures, streams, tasks and task graphs, Time Travel, cloning), dbt, Python, Git
 
 ## About the data
 
